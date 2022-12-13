@@ -7,20 +7,17 @@ import Details from "./Details";
 const App = () => {
   return (
     <StrictMode>
-      <div>
       <BrowserRouter>
-      <header>
-  <Link to="/">Adopt Me!</Link>
-</header>;
-  <Routes>
-    <Route path="/details/:id" element={<Details />} />
-    <Route path="/" element={<SearchParams />} />
-  </Routes>
-</BrowserRouter>;
-      </div>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+        <Routes>
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/" element={<SearchParams />} />
+        </Routes>
+      </BrowserRouter>
     </StrictMode>
   );
 };
 
 render(<App />, document.getElementById("root"));
-export default App;
